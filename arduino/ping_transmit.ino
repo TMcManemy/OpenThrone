@@ -8,7 +8,8 @@
 #define LOOP_DELAY 2000
 #define REFRESH_FREQUENCY 20 //seconds
 #define TOLERANCE 5 //centimeters
-#define THIS_NODE 1 //stall number (0, 1, or 2)
+#define THIS_NODE 1  //stall number (0, 1, or 2)
+#define LED_PIN 5
 
 NewPing sonar(TRIGGER_PIN, ECHO_PIN, MAX_DISTANCE);
 RF24 myRadio (6,7);
@@ -26,6 +27,10 @@ void setup() {
   myRadio.setPALevel(RF24_PA_MIN);
   //  myRadio.setPALevel(RF24_PA_MAX);  // Uncomment for more power
   myRadio.openWritingPipe(addresses[THIS_NODE]);
+
+  pinMode(LED_PIN, OUTPUT);
+  digitalWrite(LED_PIN, LOW);
+  
   delay(1000);
 }
 
@@ -37,12 +42,14 @@ void loop() {
   if (currentDistance > (referenceDistance + TOLERANCE) || currentDistance < (referenceDistance - TOLERANCE)) {
     if (!occupied) {
       occupied = true;
+      digitalWrite(LED_PIN, HIGH);
       myRadio.write( &occupied, sizeof(bool) );
       lastCalledHome = millis();
     }
   } else {
     if (occupied) {
       occupied = false;
+      digitalWrite(LED_PIN, LOW);
       myRadio.write( &occupied, sizeof(bool) );
       lastCalledHome = millis();
     }
