@@ -33,7 +33,7 @@ int main(int argc, char** argv){
 
         ostringstream json, address;
         json << "{\"occupied\": \"" << occupied << "\"}";
-        address << "http://openthrone.com/stall/" << (int)stallNum;
+        address << "http://openthrone.com/api/stalls/" << (int)stallNum;
         RestClient::Response r = RestClient::post(address.str(), "text/json", json.str());
         cout << r.code << "\n";
 	}
