@@ -2,8 +2,8 @@
 #include <SPI.h>
 #include "RF24.h"
 
-#define TRIGGER_PIN
-#define ECHO_PIN
+#define TRIGGER_PIN 9
+#define ECHO_PIN 8
 #define MAX_DISTANCE 400 // in centimeters
 
 NewPing sonar(TRIGGER_PIN, ECHO_PIN, MAX_DISTANCE);
