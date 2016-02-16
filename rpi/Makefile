@@ -16,7 +16,7 @@ endif
 all: relay
 
 relay: relay.cpp
-	g++ ${CCFLAGS} -Wall -lrf24-bcm relay.cpp -o relay
+	g++ ${CCFLAGS} -Wall -lrf24-bcm -lrestclient-cpp relay.cpp -o relay
 
 clean:
 	rm -rf relay
