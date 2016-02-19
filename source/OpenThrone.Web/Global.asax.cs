@@ -1,4 +1,5 @@
 ﻿using System.Web.Http;
+using System.Web.Routing;
 
 namespace OpenThrone.Web
 {
@@ -7,6 +8,7 @@ namespace OpenThrone.Web
         protected void Application_Start()
         {
             GlobalConfiguration.Configure(WebApiConfig.Register);
+            RouteConfig.RegisterRoutes(RouteTable.Routes);
             StallCache.Initialize();
         }
     }
