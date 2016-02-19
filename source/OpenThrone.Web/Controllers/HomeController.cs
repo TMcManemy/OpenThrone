@@ -6,7 +6,8 @@ namespace OpenThrone.Web.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            var stalls = StallCache.AllStalls();
+            return View(stalls);
         }
     }
 }

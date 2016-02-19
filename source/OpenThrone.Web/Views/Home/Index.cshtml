@@ -1,4 +1,5 @@
-﻿
+﻿@model IEnumerable<OpenThrone.Web.Models.Stall>
+
 @{
     Layout = null;
 }
@@ -6,13 +7,18 @@
 <!DOCTYPE html>
 
 <html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-</head>
-<body>
-    <div>
-        <p>Hello!</p> 
-    </div>
-</body>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>Index</title>
+    </head>
+    <body>
+        <div>
+            <ul>
+                @foreach (var stall in Model)
+                {
+                    <li>Stall @stall.Id is @(stall.Available ? "available" : "unavailable")</li>
+                }
+            </ul>
+        </div>
+    </body>
 </html>
