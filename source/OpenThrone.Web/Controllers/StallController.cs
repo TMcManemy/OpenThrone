@@ -12,17 +12,11 @@ namespace OpenThrone.Web.Controllers
             return StallCache.AllStalls();
         }
 
-        // GET api/stall/5
-        public Stall Get(int id)
-        {
-            return StallCache.Stall(id);
-        }
-
         // PUT api/stall/5
         public void Put(int id, [FromBody]Stall stall)
         {
             stall.Id = id;
-            StallCache.Update(id, stall);
+            StallCache.UpdateStall(id, stall);
         }
     }
 }

@@ -24,12 +24,7 @@ namespace OpenThrone.Web
             return _cache.Values;
         }
 
-        public static Stall Stall(int id)
-        {
-            return _cache[id];
-        }
-
-        public static void Update(int id, Stall stall)
+        public static void UpdateStall(int id, Stall stall)
         {
             _cache[id] = stall;
         }
