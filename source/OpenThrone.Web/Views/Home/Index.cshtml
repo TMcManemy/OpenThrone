@@ -7,18 +7,30 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <meta name="viewport" content="width=device-width" />
-        <title>Index</title>
-    </head>
-    <body>
-        <div>
-            <ul>
-                @foreach (var stall in Model)
-                {
-                    <li>Stall @stall.Id is @(stall.Available ? "available" : "unavailable")</li>
-                }
-            </ul>
-        </div>
-    </body>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <script src="~/Content/scripts/jquery-1.6.4.js"></script>
+    <script src="~/Content/scripts/jquery.signalR-2.2.0.js"></script>
+    <script src="~/signalr/hubs"></script>
+    <script type="text/javascript">
+        $(function() {
+            var notificationhub = $.connection.notificationHub;
+            notificationhub.client.stallAvailabilityChange = function(stall) {
+                $("#stall-" + stall.Id + "-availability").text(stall.Available ? "available" : "unavailable");
+            };
+            $.connection.hub.start();
+        });
+    </script>
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <ul>
+            @foreach (var stall in Model)
+            {
+                <li>Stall @stall.Id is <span id="stall-@stall.Id-availability">@(stall.Available ? "available" : "unavailable")</span></li>
+            }
+        </ul>
+    </div>
+</body>
 </html>

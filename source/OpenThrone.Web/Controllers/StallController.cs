@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Web.Http;
+using Microsoft.AspNet.SignalR;
+using OpenThrone.Web.Hubs;
 using OpenThrone.Web.Models;
 
 namespace OpenThrone.Web.Controllers
@@ -13,10 +15,11 @@ namespace OpenThrone.Web.Controllers
         }
 
         // PUT api/stall/5
-        public void Put(int id, [FromBody]Stall stall)
+        public void Put(int id, [FromBody] Stall stall)
         {
             stall.Id = id;
             StallCache.UpdateStall(id, stall);
+            GlobalHost.ConnectionManager.GetHubContext<NotificationHub>().Clients.All.stallAvailabilityChange(stall);
         }
     }
 }
