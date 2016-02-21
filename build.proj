@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <BuildDir>.\build</BuildDir>
+    <Solution>OpenThrone.sln</Solution>
+    <BuildConfiguration>Release</BuildConfiguration>
+    <TestResultsDir>$(BuildDir)\TestResults</TestResultsDir>    
+    <MSBuildCommunityTasksPath>.\tools\MSBuild.Community.Tasks</MSBuildCommunityTasksPath>
+    <DeployEnvironment Condition="$(DeployEnvironment) == ''">local</DeployEnvironment>
+  </PropertyGroup>
+  
+  <Import Project="$(MSBuildCommunityTasksPath)\MSBuild.Community.Tasks.Targets"/>
+
+  <Target Name="Build" DependsOnTargets="Clean;Compile;UnitTest;Package;Deploy;Bootstrap;FunctionalTest">
+  </Target>
+  
+  <Target Name="Clean" Condition="Exists('$(BuildDir)')">
+    <RemoveDir Directories="$(BuildDir)" />
+  </Target>  
+  
+  <Target Name="Compile">
+    <MSBuild Projects="$(Solution)" Targets="Rebuild" Properties="Configuration=$(BuildConfiguration)" />
+  </Target>    
+  
+  <UsingTask AssemblyFile="$(MSBuildCommunityTasksPath)\MSBuild.Community.Tasks.dll" TaskName="NUnit"/>
+  <Target Name="UnitTest" DependsOnTargets="Compile">
+    <CreateItem Include=".\**\bin\**\*.UnitTest.dll">
+      <Output TaskParameter="Include" ItemName="UnitTestAssemblies" />
+    </CreateItem>  
+    <MakeDir Directories="$(TestResultsDir)" Condition="'@(UnitTestAssemblies->Count())' &gt; 0" />
+    <NUnit ToolPath=".\tools\NUnit" Assemblies="@(UnitTestAssemblies)" OutputXmlFile=".\build\TestResults\UnitTestResults.xml" Condition="'@(UnitTestAssemblies->Count())' &gt; 0" />
+  </Target>   
+
+  <Target Name="Package" DependsOnTargets="Clean;Compile">
+    <MSBuild Projects=".\source\OpenThrone.Web\OpenThrone.Web.csproj" Targets="Package" />
+    <CreateItem Include=".\source\OpenThrone.Web\obj\**\OpenThrone.Web.zip;.\source\OpenThrone.Web\obj\**\OpenThrone.Web.deploy.cmd;.\source\OpenThrone.Web\obj\**\OpenThrone.Web.SetParameters.xml">
+      <Output TaskParameter="Include" ItemName="PackageFiles" />
+    </CreateItem>  
+    <Copy SourceFiles="@(PackageFiles)" DestinationFolder=".\build\Package" />    
+  </Target>     
+  
+  <Import Project="$(DeployEnvironment).proj"/>
+  <Target Name="Deploy">
+    <XmlPoke XmlInputPath=".\build\Package\OpenThrone.Web.SetParameters.xml" Query="//parameters/setParameter[@name='IIS Web Application Name']/@value" Value="$(TargetWebSiteName)"/>   
+    <Exec Command=".\build\Package\OpenThrone.Web.deploy.cmd /Y /M:$(TargetWebServerName)" />
+  </Target>  
+  
+  <Target Name="Bootstrap">
+  </Target>    
+  
+  <Target Name="FunctionalTest">    
+  </Target>  
+</Project>
