@@ -6,7 +6,6 @@
     <BuildConfiguration>Release</BuildConfiguration>
     <TestResultsDir>$(BuildDir)\TestResults</TestResultsDir>    
     <MSBuildCommunityTasksPath>.\tools\MSBuild.Community.Tasks</MSBuildCommunityTasksPath>
-    <DeployEnvironment Condition="$(DeployEnvironment) == ''">local</DeployEnvironment>
   </PropertyGroup>
   
   <Import Project="$(MSBuildCommunityTasksPath)\MSBuild.Community.Tasks.Targets"/>
@@ -39,10 +38,9 @@
     <Copy SourceFiles="@(PackageFiles)" DestinationFolder=".\build\Package" />    
   </Target>     
   
-  <Import Project="$(DeployEnvironment).proj"/>
   <Target Name="Deploy">
-    <XmlPoke XmlInputPath=".\build\Package\OpenThrone.Web.SetParameters.xml" Query="//parameters/setParameter[@name='IIS Web Application Name']/@value" Value="$(TargetWebSiteName)"/>   
-    <Exec Command=".\build\Package\OpenThrone.Web.deploy.cmd /Y /M:$(TargetWebServerName)" />
+    <XmlPoke XmlInputPath=".\build\Package\OpenThrone.Web.SetParameters.xml" Query="//parameters/setParameter[@name='IIS Web Application Name']/@value" Value="OpenThrone"/>   
+    <Exec Command=".\build\Package\OpenThrone.Web.deploy.cmd /Y /M:$(TargetWebServerName) /U:$(Username) /P:$(Password) " />
   </Target>  
   
   <Target Name="Bootstrap">
