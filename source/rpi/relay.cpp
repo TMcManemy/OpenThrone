@@ -32,7 +32,7 @@ int main(int argc, char** argv){
         printf("Got response %s from stall %i \n", occupied ? "occupied" : "empty", stallNum);
 
         ostringstream json, address;
-        json << "{\"available\": \"" << occupied << "\"}";
+        json << "{\"available\": \"" << !occupied << "\"}";
         address << "http://openthrone.com/api/stall/" << (int)stallNum;
         RestClient::Response r = RestClient::put(address.str(), "text/json", json.str());
         cout << r.code << "\n";
