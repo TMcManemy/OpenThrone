@@ -11,11 +11,12 @@ namespace OpenThrone.Web
         public static void Initialize()
         {
             var initialState = new[]
-                {
-                    new Stall {Id = 1, Available = true},
-                    new Stall {Id = 2, Available = true},
-                    new Stall {Id = 3, Available = true},
-                };
+            {
+                new Stall {Id = 1, Available = true, Location = "asynchrony"},
+                new Stall {Id = 2, Available = true, Location = "asynchrony"},
+                new Stall {Id = 3, Available = true, Location = "asynchrony"},
+                new Stall {Id = 4, Available = true, Location = "wwt"},
+            };
             _cache = initialState.ToDictionary(s => s.Id);
         }
 

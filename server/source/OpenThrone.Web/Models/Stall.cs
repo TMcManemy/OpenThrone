@@ -4,5 +4,6 @@ namespace OpenThrone.Web.Models
     {
         public int Id { get; set; }
         public bool Available { get; set; }
+        public string Location { get; set; }
     }
 }

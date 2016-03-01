@@ -1,4 +1,5 @@
-﻿using System.Web.Mvc;
+﻿using System.Linq;
+using System.Web.Mvc;
 
 namespace OpenThrone.Web.Controllers
 {
@@ -6,7 +7,8 @@ namespace OpenThrone.Web.Controllers
     {
         public ActionResult Index()
         {
-            var stalls = StallCache.AllStalls();
+            var subdomain = Request.Url.Host.Split('.')[0];
+            var stalls = StallCache.AllStalls().Where(s => s.Location == subdomain);
             return View(stalls);
         }
     }
