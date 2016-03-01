@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -25,7 +26,8 @@ namespace OpenThrone.Web.Controllers
 
             //validation
             var token = authorization.Parameter;
-            if (token != "A") return;
+            var apiToken = ConfigurationManager.AppSettings["apitoken"];
+            if (token != apiToken) return;
 
             var identity = new ClaimsIdentity(new[] {new Claim("Token", token)}, "ExternalBearer");
             context.Principal = new ClaimsPrincipal(identity);
