@@ -5,6 +5,7 @@
 #include <unistd.h>
 #include <RF24/RF24.h>
 #include "restclient-cpp/restclient.h"
+#include "restclient-cpp/connection.h"
 
 using namespace std;
 
@@ -19,7 +20,12 @@ int main(int argc, char** argv){
 	radio.openReadingPipe(2,pipes[1]);
 	radio.openReadingPipe(3,pipes[2]);
 	radio.startListening();
-
+	
+	RestClient::init();
+	RestClient::Connection conn = RestClient::Connection("http://openthrone.com/api/stall");
+	conn.AppendHeader("Authorization", "DontHackMeBro");
+	conn.AppendHeader("Content-Type", "application/json");
+	
 	while (1)
 	{
 		uint8_t stallNum;
@@ -33,8 +39,8 @@ int main(int argc, char** argv){
 		
 		ostringstream json, address;
 		json << "{\"available\": \"" << !occupied << "\"}";
-		address << "http://openthrone.com/api/stall/" << (int)stallNum;
-		RestClient::Response r = RestClient::put(address.str(), "text/json", json.str());
+		address << "/" << (int)stallNum;
+		RestClient::Response r = conn.put(address.str(), json.str());
 		cout << r.code << "\n";
 	}
 
