@@ -45,7 +45,7 @@ int main(int argc, char** argv){
 		printf("Got response %s from stall %i \n", occupied ? "occupied" : "empty", stallNum);
 		
 		ostringstream json, address;
-		json << "{\"available\": \"" << !occupied << "\"}";
+		json << "{\"available\": \"" << (occupied ? "false" : "true") << "\"}";
 		address << "/" << (int)stallNum;
 		RestClient::Response r = conn.put(address.str(), json.str());
 		cout << r.code << "\n";
