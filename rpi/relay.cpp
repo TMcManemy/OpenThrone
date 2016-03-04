@@ -3,6 +3,7 @@
 #include <sstream>
 #include <string>
 #include <unistd.h>
+#include <fstream>
 #include <RF24/RF24.h>
 #include "restclient-cpp/restclient.h"
 #include "restclient-cpp/connection.h"
@@ -21,9 +22,15 @@ int main(int argc, char** argv){
 	radio.openReadingPipe(3,pipes[2]);
 	radio.startListening();
 	
+	ifstream secretFile;
+	secretFile.open("/home/pi/secret.txt");
+	string secret;
+	getline(secretFile, secret);
+	secretFile.close();
+	
 	RestClient::init();
-	RestClient::Connection conn = RestClient::Connection("http://openthrone.com/api/stall");
-	conn.AppendHeader("Authorization", "DontHackMeBro");
+	RestClient::Connection conn("http://openthrone.com/api/stall");
+	conn.AppendHeader("Authorization", secret);
 	conn.AppendHeader("Content-Type", "application/json");
 	
 	while (1)
