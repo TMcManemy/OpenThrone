@@ -29,7 +29,7 @@ int main(int argc, char** argv){
 	secretFile.close();
 	
 	RestClient::init();
-	RestClient::Connection conn("http://openthrone.com/api/stall");
+	RestClient::Connection conn("https://www.openthrone.com/api/stall");
 	conn.AppendHeader("Authorization", secret);
 	conn.AppendHeader("Content-Type", "application/json");
 	
