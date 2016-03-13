@@ -167,9 +167,11 @@
     <Content Include="Content\images\portfolio\startup-framework.png" />
     <Content Include="Content\images\portfolio\treehouse-preview.png" />
     <Content Include="Content\images\portfolio\treehouse.png" />
-    <Content Include="Content\images\team\1.jpg" />
-    <Content Include="Content\images\team\2.jpg" />
-    <Content Include="Content\images\team\3.jpg" />
+    <Content Include="Content\images\team\andrew_blackwell.jpg" />
+    <Content Include="Content\images\team\chris_carpenter.jpg" />
+    <Content Include="Content\images\team\john_hubb.jpg" />
+    <Content Include="Content\images\team\maryjo_mueller.jpg" />
+    <Content Include="Content\images\team\tim_mcmanemy.jpg" />
     <Content Include="Content\scripts\agency.js" />
     <Content Include="Content\scripts\cbpAnimatedHeader.min.js" />
     <Content Include="Content\scripts\classie.js" />
