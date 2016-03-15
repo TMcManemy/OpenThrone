@@ -3,13 +3,61 @@
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+body {
+	padding-top: 84px;
+}
+.navbar {
+	background:#7495A6!important;
+	border: 0px;
+	padding:1em;
+}
+.navbar-header img {
+	width:200px;
+}
+#stall-one {
+	height: 50px;
+	background: #ff0000;
+}
+#stall-two {
+	height: 50px;
+	background: #ccc;
+}
+#stall-three {
+	height: 50px;
+
+}
+
+.stall {
+	border: 1px solid #ccc;
+	margin-bottom: 1em;
+}
+
+.stall-sm {
+	height: 100px;
+	width: 50%;
+	float:right;
+	margin-left:50%;
+	
+}
+.stall-lg{
+	height: 150px;
+	
+}
 
 
-
-
-
-
-
+.status-occupied {
+/* #CC3333 */
+background-color:#CC3333 ;
+	
+}
+.status-transition {
+/* #FFCC00  */
+background-color:#FFCC00;
+}
+.status-open {
+/* #33CC33 */
+background-color:#33CC33;
+}
 
 
 
