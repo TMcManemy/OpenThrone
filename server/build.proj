@@ -31,7 +31,7 @@
   </Target>   
 
   <Target Name="Package" DependsOnTargets="Clean;Compile">
-    <MSBuild Projects=".\source\OpenThrone.Web\OpenThrone.Web.csproj" Targets="Package" />
+    <MSBuild Projects=".\source\OpenThrone.Web\OpenThrone.Web.csproj" Targets="Package" Properties="Configuration=$(BuildConfiguration)" />
     <CreateItem Include=".\source\OpenThrone.Web\obj\**\OpenThrone.Web.zip;.\source\OpenThrone.Web\obj\**\OpenThrone.Web.deploy.cmd;.\source\OpenThrone.Web\obj\**\OpenThrone.Web.SetParameters.xml">
       <Output TaskParameter="Include" ItemName="PackageFiles" />
     </CreateItem>  
