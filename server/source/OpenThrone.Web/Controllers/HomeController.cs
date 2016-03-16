@@ -9,7 +9,8 @@ namespace OpenThrone.Web.Controllers
         {
             var subdomain = Request.Url.Host.Split('.')[0];
             var stalls = StallCache.AllStalls().Where(s => s.Location == subdomain);
-            return View(stalls);
+
+            return stalls.Any() ? View(subdomain, stalls) : View("Index");
         }
     }
 }

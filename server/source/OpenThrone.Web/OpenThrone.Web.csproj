@@ -109,6 +109,27 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="..\..\..\prototype\css\bootstrap-theme.min.css">
+      <Link>Content\css\bootstrap-theme.min.css</Link>
+    </Content>
+    <Content Include="..\..\..\prototype\css\bootstrap.min.css">
+      <Link>Content\css\bootstrap.min.css</Link>
+    </Content>
+    <Content Include="..\..\..\prototype\css\main.css">
+      <Link>Content\css\main.css</Link>
+    </Content>
+    <Content Include="..\..\..\prototype\img\openthrone-logo.svg">
+      <Link>Content\images\openthrone-logo.svg</Link>
+    </Content>
+    <Content Include="..\..\..\prototype\js\main.js">
+      <Link>Content\scripts\main.js</Link>
+    </Content>
+    <Content Include="..\..\..\prototype\js\vendor\bootstrap.min.js">
+      <Link>Content\scripts\bootstrap.min.js</Link>
+    </Content>
+    <Content Include="..\..\..\prototype\js\vendor\modernizr-2.8.3-respond-1.4.2.min.js">
+      <Link>Content\scripts\modernizr-2.8.3-respond-1.4.2.min.js</Link>
+    </Content>
     <Content Include="Global.asax" />
     <None Include="Content\scripts\jquery-1.6.4-vsdoc.js" />
     <Content Include="Content\scripts\jquery-1.6.4.js" />
@@ -135,6 +156,8 @@
   <ItemGroup>
     <Content Include="packages.config" />
     <Content Include="Views\web.config" />
+    <Content Include="Views\Home\WWT.cshtml" />
+    <Content Include="Views\Home\Asynchrony.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -170,6 +193,9 @@
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <Target Name="CopyLinkedContentFiles" BeforeTargets="Build">
+    <Copy SourceFiles="%(Content.Identity)" DestinationFiles="%(Content.Link)" SkipUnchangedFiles="true" OverwriteReadOnlyFiles="true" Condition="'%(Content.Link)' != ''" />
   </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
