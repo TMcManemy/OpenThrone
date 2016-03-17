@@ -12,7 +12,7 @@ using namespace std;
 
 RF24 radio(22,0);
 
-const uint8_t pipes[][6] = {"1Node","2Node","3Node"};
+const uint8_t pipes[][6] = {"1Node","2Node","3Node", "4Node"};
 
 int main(int argc, char** argv){
 	radio.begin();
@@ -20,6 +20,7 @@ int main(int argc, char** argv){
 	radio.openReadingPipe(1,pipes[0]);
 	radio.openReadingPipe(2,pipes[1]);
 	radio.openReadingPipe(3,pipes[2]);
+	radio.openReadingPipe(4,pipes[3]);
 	radio.startListening();
 	
 	ifstream secretFile;
