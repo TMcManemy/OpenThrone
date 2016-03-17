@@ -8,13 +8,13 @@
 #define LOOP_DELAY 2000
 #define REFRESH_FREQUENCY 20 //seconds
 #define TOLERANCE 5 //centimeters
-#define THIS_NODE 1  //stall number (0, 1, or 2)
+#define THIS_NODE 1  //stall number (0, 1, 2, or 3)
 #define LED_PIN 5
 
 NewPing sonar(TRIGGER_PIN, ECHO_PIN, MAX_DISTANCE);
 RF24 myRadio (6,7);
 
-byte addresses[][6] = {"1Node", "2Node", "3Node"};
+byte addresses[][6] = {"1Node", "2Node", "3Node", "4Node"};
 int referenceDistance;
 unsigned long lastCalledHome = 0;
 bool occupied = false;
@@ -24,8 +24,8 @@ void setup() {
   
   myRadio.begin();
   myRadio.setChannel(108);
-  myRadio.setPALevel(RF24_PA_MIN);
-  //  myRadio.setPALevel(RF24_PA_MAX);  // Uncomment for more power
+  //myRadio.setPALevel(RF24_PA_MIN);
+  myRadio.setPALevel(RF24_PA_MAX);
   myRadio.openWritingPipe(addresses[THIS_NODE]);
 
   pinMode(LED_PIN, OUTPUT);
