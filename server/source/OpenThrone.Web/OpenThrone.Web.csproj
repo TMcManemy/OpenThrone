@@ -21,6 +21,7 @@
     <IISExpressUseClassicPipelineMode />
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -127,15 +128,16 @@
     <Content Include="..\..\..\prototype\js\vendor\bootstrap.min.js">
       <Link>Content\scripts\bootstrap.min.js</Link>
     </Content>
+    <Content Include="..\..\..\prototype\js\vendor\jquery-1.11.2.min.js">
+      <Link>Content\scripts\jquery-1.11.2.min.js</Link>
+    </Content>
+    <Content Include="..\..\..\prototype\js\vendor\jquery.signalR-2.2.0.min.js">
+      <Link>Content\scripts\jquery.signalR-2.2.0.min.js</Link>
+    </Content>
     <Content Include="..\..\..\prototype\js\vendor\modernizr-2.8.3-respond-1.4.2.min.js">
       <Link>Content\scripts\modernizr-2.8.3-respond-1.4.2.min.js</Link>
     </Content>
     <Content Include="Global.asax" />
-    <None Include="Content\scripts\jquery-1.6.4-vsdoc.js" />
-    <Content Include="Content\scripts\jquery-1.6.4.js" />
-    <Content Include="Content\scripts\jquery-1.6.4.min.js" />
-    <Content Include="Content\scripts\jquery.signalR-2.2.0.js" />
-    <Content Include="Content\scripts\jquery.signalR-2.2.0.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
