@@ -110,6 +110,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="..\..\..\prototype\css\agency.css">
+      <Link>Content\css\agency.css</Link>
+    </Content>
     <Content Include="..\..\..\prototype\css\bootstrap-theme.min.css">
       <Link>Content\css\bootstrap-theme.min.css</Link>
     </Content>
@@ -119,95 +122,143 @@
     <Content Include="..\..\..\prototype\css\main.css">
       <Link>Content\css\main.css</Link>
     </Content>
-    <Content Include="..\..\..\prototype\img\openthrone-logo.svg">
+    <Content Include="..\..\..\prototype\fonts\font-awesome\css\font-awesome.css">
+      <Link>Content\fonts\font-awesome\css\font-awesome.css</Link>
+    </Content>
+    <Content Include="..\..\..\prototype\fonts\font-awesome\css\font-awesome.min.css">
+      <Link>Content\fonts\font-awesome\css\font-awesome.min.css</Link>
+    </Content>
+    <Content Include="..\..\..\prototype\fonts\font-awesome\fonts\fontawesome-webfont.svg">
+      <Link>Content\fonts\font-awesome\fonts\fontawesome-webfont.svg</Link>
+    </Content>
+    <Content Include="..\..\..\prototype\images\about\1.jpg">
+      <Link>Content\images\about\1.jpg</Link>
+    </Content>
+    <Content Include="..\..\..\prototype\images\about\2.jpg">
+      <Link>Content\images\about\2.jpg</Link>
+    </Content>
+    <Content Include="..\..\..\prototype\images\about\3.jpg">
+      <Link>Content\images\about\3.jpg</Link>
+    </Content>
+    <Content Include="..\..\..\prototype\images\about\4.jpg">
+      <Link>Content\images\about\4.jpg</Link>
+    </Content>
+    <Content Include="..\..\..\prototype\images\header-bg.jpg">
+      <Link>Content\images\header-bg.jpg</Link>
+    </Content>
+    <Content Include="..\..\..\prototype\images\logos\aetuts.jpg">
+      <Link>Content\images\logos\aetuts.jpg</Link>
+    </Content>
+    <Content Include="..\..\..\prototype\images\logos\creative-market.jpg">
+      <Link>Content\images\logos\creative-market.jpg</Link>
+    </Content>
+    <Content Include="..\..\..\prototype\images\logos\designmodo.jpg">
+      <Link>Content\images\logos\designmodo.jpg</Link>
+    </Content>
+    <Content Include="..\..\..\prototype\images\logos\envato.jpg">
+      <Link>Content\images\logos\envato.jpg</Link>
+    </Content>
+    <Content Include="..\..\..\prototype\images\logos\microlancer.jpg">
+      <Link>Content\images\logos\microlancer.jpg</Link>
+    </Content>
+    <Content Include="..\..\..\prototype\images\logos\themeforest.jpg">
+      <Link>Content\images\logos\themeforest.jpg</Link>
+    </Content>
+    <Content Include="..\..\..\prototype\images\logos\wordpress.jpg">
+      <Link>Content\images\logos\wordpress.jpg</Link>
+    </Content>
+    <Content Include="..\..\..\prototype\images\map-image.png">
+      <Link>Content\images\map-image.png</Link>
+    </Content>
+    <Content Include="..\..\..\prototype\images\openthrone-logo.svg">
       <Link>Content\images\openthrone-logo.svg</Link>
     </Content>
-    <Content Include="..\..\..\prototype\js\main.js">
+    <Content Include="..\..\..\prototype\images\portfolio\dreams-preview.png">
+      <Link>Content\images\portfolio\dreams-preview.png</Link>
+    </Content>
+    <Content Include="..\..\..\prototype\images\portfolio\dreams.png">
+      <Link>Content\images\portfolio\dreams.png</Link>
+    </Content>
+    <Content Include="..\..\..\prototype\images\portfolio\escape-preview.png">
+      <Link>Content\images\portfolio\escape-preview.png</Link>
+    </Content>
+    <Content Include="..\..\..\prototype\images\portfolio\escape.png">
+      <Link>Content\images\portfolio\escape.png</Link>
+    </Content>
+    <Content Include="..\..\..\prototype\images\portfolio\golden-preview.png">
+      <Link>Content\images\portfolio\golden-preview.png</Link>
+    </Content>
+    <Content Include="..\..\..\prototype\images\portfolio\golden.png">
+      <Link>Content\images\portfolio\golden.png</Link>
+    </Content>
+    <Content Include="..\..\..\prototype\images\portfolio\roundicons-free.png">
+      <Link>Content\images\portfolio\roundicons-free.png</Link>
+    </Content>
+    <Content Include="..\..\..\prototype\images\portfolio\roundicons.png">
+      <Link>Content\images\portfolio\roundicons.png</Link>
+    </Content>
+    <Content Include="..\..\..\prototype\images\portfolio\startup-framework-preview.png">
+      <Link>Content\images\portfolio\startup-framework-preview.png</Link>
+    </Content>
+    <Content Include="..\..\..\prototype\images\portfolio\startup-framework.png">
+      <Link>Content\images\portfolio\startup-framework.png</Link>
+    </Content>
+    <Content Include="..\..\..\prototype\images\portfolio\treehouse-preview.png">
+      <Link>Content\images\portfolio\treehouse-preview.png</Link>
+    </Content>
+    <Content Include="..\..\..\prototype\images\portfolio\treehouse.png">
+      <Link>Content\images\portfolio\treehouse.png</Link>
+    </Content>
+    <Content Include="..\..\..\prototype\images\team\andrew_blackwell.jpg">
+      <Link>Content\images\team\andrew_blackwell.jpg</Link>
+    </Content>
+    <Content Include="..\..\..\prototype\images\team\chris_carpenter.jpg">
+      <Link>Content\images\team\chris_carpenter.jpg</Link>
+    </Content>
+    <Content Include="..\..\..\prototype\images\team\john_hubb.jpg">
+      <Link>Content\images\team\john_hubb.jpg</Link>
+    </Content>
+    <Content Include="..\..\..\prototype\images\team\maryjo_mueller.jpg">
+      <Link>Content\images\team\maryjo_mueller.jpg</Link>
+    </Content>
+    <Content Include="..\..\..\prototype\images\team\tim_mcmanemy.jpg">
+      <Link>Content\images\team\tim_mcmanemy.jpg</Link>
+    </Content>
+    <Content Include="..\..\..\prototype\scripts\main.js">
       <Link>Content\scripts\main.js</Link>
     </Content>
-    <Content Include="..\..\..\prototype\js\vendor\bootstrap.min.js">
+    <Content Include="..\..\..\prototype\scripts\agency.js">
+      <Link>Content\scripts\agency.js</Link>
+    </Content>
+    <Content Include="..\..\..\prototype\scripts\bootstrap.min.js">
       <Link>Content\scripts\bootstrap.min.js</Link>
     </Content>
-    <Content Include="..\..\..\prototype\js\vendor\jquery-1.11.2.min.js">
+    <Content Include="..\..\..\prototype\scripts\cbpAnimatedHeader.min.js">
+      <Link>Content\scripts\cbpAnimatedHeader.min.js</Link>
+    </Content>
+    <Content Include="..\..\..\prototype\scripts\classie.js">
+      <Link>Content\scripts\classie.js</Link>
+    </Content>
+    <Content Include="..\..\..\prototype\scripts\contact_me.js">
+      <Link>Content\scripts\contact_me.js</Link>
+    </Content>
+    <Content Include="..\..\..\prototype\scripts\jqBootstrapValidation.js">
+      <Link>Content\scripts\jqBootstrapValidation.js</Link>
+    </Content>
+    <Content Include="..\..\..\prototype\scripts\jquery-1.11.2.min.js">
       <Link>Content\scripts\jquery-1.11.2.min.js</Link>
     </Content>
-    <Content Include="..\..\..\prototype\js\vendor\jquery.signalR-2.2.0.min.js">
+    <Content Include="..\..\..\prototype\scripts\jquery-1.9.1.min.js">
+      <Link>Content\scripts\jquery-1.9.1.min.js</Link>
+    </Content>
+    <Content Include="..\..\..\prototype\scripts\jquery.signalR-2.2.0.min.js">
       <Link>Content\scripts\jquery.signalR-2.2.0.min.js</Link>
     </Content>
-    <Content Include="..\..\..\prototype\js\vendor\modernizr-2.8.3-respond-1.4.2.min.js">
+    <Content Include="..\..\..\prototype\scripts\modernizr-2.8.3-respond-1.4.2.min.js">
       <Link>Content\scripts\modernizr-2.8.3-respond-1.4.2.min.js</Link>
     </Content>
     <Content Include="Global.asax" />
-    <Content Include="Content\css\agency.css" />
-    <Content Include="Content\fonts\font-awesome\css\font-awesome.css" />
-    <Content Include="Content\fonts\font-awesome\css\font-awesome.min.css" />
-    <Content Include="Content\fonts\font-awesome\fonts\fontawesome-webfont.svg" />
-    <Content Include="Content\images\about\1.jpg" />
-    <Content Include="Content\images\about\2.jpg" />
-    <Content Include="Content\images\about\3.jpg" />
-    <Content Include="Content\images\about\4.jpg" />
-    <Content Include="Content\images\header-bg.jpg" />
-    <Content Include="Content\images\logos\aetuts.jpg" />
-    <Content Include="Content\images\logos\creative-market.jpg" />
-    <Content Include="Content\images\logos\designmodo.jpg" />
-    <Content Include="Content\images\logos\envato.jpg" />
-    <Content Include="Content\images\logos\microlancer.jpg" />
-    <Content Include="Content\images\logos\themeforest.jpg" />
-    <Content Include="Content\images\logos\wordpress.jpg" />
-    <Content Include="Content\images\map-image.png" />
-    <Content Include="Content\images\portfolio\dreams-preview.png" />
-    <Content Include="Content\images\portfolio\dreams.png" />
-    <Content Include="Content\images\portfolio\escape-preview.png" />
-    <Content Include="Content\images\portfolio\escape.png" />
-    <Content Include="Content\images\portfolio\golden-preview.png" />
-    <Content Include="Content\images\portfolio\golden.png" />
-    <Content Include="Content\images\portfolio\roundicons-free.png" />
-    <Content Include="Content\images\portfolio\roundicons.png" />
-    <Content Include="Content\images\portfolio\startup-framework-preview.png" />
-    <Content Include="Content\images\portfolio\startup-framework.png" />
-    <Content Include="Content\images\portfolio\treehouse-preview.png" />
-    <Content Include="Content\images\portfolio\treehouse.png" />
-    <Content Include="Content\images\team\andrew_blackwell.jpg" />
-    <Content Include="Content\images\team\chris_carpenter.jpg" />
-    <Content Include="Content\images\team\john_hubb.jpg" />
-    <Content Include="Content\images\team\maryjo_mueller.jpg" />
-    <Content Include="Content\images\team\tim_mcmanemy.jpg" />
-    <Content Include="Content\scripts\agency.js" />
-    <Content Include="Content\scripts\cbpAnimatedHeader.min.js" />
-    <Content Include="Content\scripts\classie.js" />
-    <Content Include="Content\scripts\contact_me.js" />
-    <Content Include="Content\scripts\jqBootstrapValidation.js" />
     <Content Include="Global.asax" />
-    <Content Include="Content\fonts\font-awesome\fonts\fontawesome-webfont.eot" />
-    <Content Include="Content\fonts\font-awesome\fonts\fontawesome-webfont.ttf" />
-    <Content Include="Content\fonts\font-awesome\fonts\fontawesome-webfont.woff" />
-    <Content Include="Content\fonts\font-awesome\fonts\FontAwesome.otf" />
-    <Content Include="Content\fonts\font-awesome\less\bordered-pulled.less" />
-    <Content Include="Content\fonts\font-awesome\less\core.less" />
-    <Content Include="Content\fonts\font-awesome\less\fixed-width.less" />
-    <Content Include="Content\fonts\font-awesome\less\font-awesome.less" />
-    <Content Include="Content\fonts\font-awesome\less\icons.less" />
-    <Content Include="Content\fonts\font-awesome\less\larger.less" />
-    <Content Include="Content\fonts\font-awesome\less\list.less" />
-    <Content Include="Content\fonts\font-awesome\less\mixins.less" />
-    <Content Include="Content\fonts\font-awesome\less\path.less" />
-    <Content Include="Content\fonts\font-awesome\less\rotated-flipped.less" />
-    <Content Include="Content\fonts\font-awesome\less\spinning.less" />
-    <Content Include="Content\fonts\font-awesome\less\stacked.less" />
-    <Content Include="Content\fonts\font-awesome\less\variables.less" />
-    <Content Include="Content\fonts\font-awesome\scss\font-awesome.scss" />
-    <Content Include="Content\fonts\font-awesome\scss\_bordered-pulled.scss" />
-    <Content Include="Content\fonts\font-awesome\scss\_core.scss" />
-    <Content Include="Content\fonts\font-awesome\scss\_fixed-width.scss" />
-    <Content Include="Content\fonts\font-awesome\scss\_icons.scss" />
-    <Content Include="Content\fonts\font-awesome\scss\_larger.scss" />
-    <Content Include="Content\fonts\font-awesome\scss\_list.scss" />
-    <Content Include="Content\fonts\font-awesome\scss\_mixins.scss" />
-    <Content Include="Content\fonts\font-awesome\scss\_path.scss" />
-    <Content Include="Content\fonts\font-awesome\scss\_rotated-flipped.scss" />
-    <Content Include="Content\fonts\font-awesome\scss\_spinning.scss" />
-    <Content Include="Content\fonts\font-awesome\scss\_stacked.scss" />
-    <Content Include="Content\fonts\font-awesome\scss\_variables.scss" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -231,6 +282,96 @@
     <Content Include="Views\Home\WWT.cshtml" />
     <Content Include="Views\Home\Asynchrony.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="..\..\..\prototype\fonts\font-awesome\fonts\fontawesome-webfont.eot">
+      <Link>Content\fonts\font-awesome\fonts\fontawesome-webfont.eot</Link>
+    </Content>
+    <Content Include="..\..\..\prototype\fonts\font-awesome\fonts\fontawesome-webfont.ttf">
+      <Link>Content\fonts\font-awesome\fonts\fontawesome-webfont.ttf</Link>
+    </Content>
+    <Content Include="..\..\..\prototype\fonts\font-awesome\fonts\fontawesome-webfont.woff">
+      <Link>Content\fonts\font-awesome\fonts\fontawesome-webfont.woff</Link>
+    </Content>
+    <Content Include="..\..\..\prototype\fonts\font-awesome\fonts\FontAwesome.otf">
+      <Link>Content\fonts\font-awesome\fonts\FontAwesome.otf</Link>
+    </Content>
+    <Content Include="..\..\..\prototype\fonts\font-awesome\less\bordered-pulled.less">
+      <Link>Content\fonts\font-awesome\less\bordered-pulled.less</Link>
+    </Content>
+    <Content Include="..\..\..\prototype\fonts\font-awesome\less\core.less">
+      <Link>Content\fonts\font-awesome\less\core.less</Link>
+    </Content>
+    <Content Include="..\..\..\prototype\fonts\font-awesome\less\fixed-width.less">
+      <Link>Content\fonts\font-awesome\less\fixed-width.less</Link>
+    </Content>
+    <Content Include="..\..\..\prototype\fonts\font-awesome\less\font-awesome.less">
+      <Link>Content\fonts\font-awesome\less\font-awesome.less</Link>
+    </Content>
+    <Content Include="..\..\..\prototype\fonts\font-awesome\less\icons.less">
+      <Link>Content\fonts\font-awesome\less\icons.less</Link>
+    </Content>
+    <Content Include="..\..\..\prototype\fonts\font-awesome\less\larger.less">
+      <Link>Content\fonts\font-awesome\less\larger.less</Link>
+    </Content>
+    <Content Include="..\..\..\prototype\fonts\font-awesome\less\list.less">
+      <Link>Content\fonts\font-awesome\less\list.less</Link>
+    </Content>
+    <Content Include="..\..\..\prototype\fonts\font-awesome\less\mixins.less">
+      <Link>Content\fonts\font-awesome\less\mixins.less</Link>
+    </Content>
+    <Content Include="..\..\..\prototype\fonts\font-awesome\less\path.less">
+      <Link>Content\fonts\font-awesome\less\path.less</Link>
+    </Content>
+    <Content Include="..\..\..\prototype\fonts\font-awesome\less\rotated-flipped.less">
+      <Link>Content\fonts\font-awesome\less\rotated-flipped.less</Link>
+    </Content>
+    <Content Include="..\..\..\prototype\fonts\font-awesome\less\spinning.less">
+      <Link>Content\fonts\font-awesome\less\spinning.less</Link>
+    </Content>
+    <Content Include="..\..\..\prototype\fonts\font-awesome\less\stacked.less">
+      <Link>Content\fonts\font-awesome\less\stacked.less</Link>
+    </Content>
+    <Content Include="..\..\..\prototype\fonts\font-awesome\less\variables.less">
+      <Link>Content\fonts\font-awesome\less\variables.less</Link>
+    </Content>
+    <Content Include="..\..\..\prototype\fonts\font-awesome\scss\font-awesome.scss">
+      <Link>Content\fonts\font-awesome\scss\font-awesome.scss</Link>
+    </Content>
+    <Content Include="..\..\..\prototype\fonts\font-awesome\scss\_bordered-pulled.scss">
+      <Link>Content\fonts\font-awesome\scss\_bordered-pulled.scss</Link>
+    </Content>
+    <Content Include="..\..\..\prototype\fonts\font-awesome\scss\_core.scss">
+      <Link>Content\fonts\font-awesome\scss\_core.scss</Link>
+    </Content>
+    <Content Include="..\..\..\prototype\fonts\font-awesome\scss\_fixed-width.scss">
+      <Link>Content\fonts\font-awesome\scss\_fixed-width.scss</Link>
+    </Content>
+    <Content Include="..\..\..\prototype\fonts\font-awesome\scss\_icons.scss">
+      <Link>Content\fonts\font-awesome\scss\_icons.scss</Link>
+    </Content>
+    <Content Include="..\..\..\prototype\fonts\font-awesome\scss\_larger.scss">
+      <Link>Content\fonts\font-awesome\scss\_larger.scss</Link>
+    </Content>
+    <Content Include="..\..\..\prototype\fonts\font-awesome\scss\_list.scss">
+      <Link>Content\fonts\font-awesome\scss\_list.scss</Link>
+    </Content>
+    <Content Include="..\..\..\prototype\fonts\font-awesome\scss\_mixins.scss">
+      <Link>Content\fonts\font-awesome\scss\_mixins.scss</Link>
+    </Content>
+    <Content Include="..\..\..\prototype\fonts\font-awesome\scss\_path.scss">
+      <Link>Content\fonts\font-awesome\scss\_path.scss</Link>
+    </Content>
+    <Content Include="..\..\..\prototype\fonts\font-awesome\scss\_rotated-flipped.scss">
+      <Link>Content\fonts\font-awesome\scss\_rotated-flipped.scss</Link>
+    </Content>
+    <Content Include="..\..\..\prototype\fonts\font-awesome\scss\_spinning.scss">
+      <Link>Content\fonts\font-awesome\scss\_spinning.scss</Link>
+    </Content>
+    <Content Include="..\..\..\prototype\fonts\font-awesome\scss\_stacked.scss">
+      <Link>Content\fonts\font-awesome\scss\_stacked.scss</Link>
+    </Content>
+    <Content Include="..\..\..\prototype\fonts\font-awesome\scss\_variables.scss">
+      <Link>Content\fonts\font-awesome\scss\_variables.scss</Link>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
