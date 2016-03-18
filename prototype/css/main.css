@@ -30,6 +30,8 @@ body {
 .stall {
 	border: 1px solid #ccc;
 	margin-bottom: 1em;
+	border-radius: 5px;
+	position: relative;
 }
 
 .stall-sm {
@@ -47,19 +49,63 @@ body {
 
 .status-occupied {
 /* #CC3333 */
-background-color:#CC3333 ;
+background-color:#ff9900 ;
+	
+}
+.status-occupied:after {
+	content: 'occupied';
+	position: absolute;
+	right:0;
+	left: 0;
+	text-align: center;
+	margin-top: 1px;
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 14px;
+	margin-top: 18px;
 	
 }
 .status-transition {
 /* #FFCC00  */
-background-color:#FFCC00;
+background-color:#79a6d2;
 }
+
+.status-transition:after {
+	content: 'In Transition';
+	position: absolute;
+	right:0;
+	left: 0;
+	text-align: center;
+	margin-top: 1px;
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 14px;
+	margin-top: 18px;
+	
+}
+
+
 .status-open {
 /* #33CC33 */
-background-color:#33CC33;
+background-color:#ecf2f9;
 }
 
-
+.status-open:after {
+	content: 'OPEN!';
+	position: absolute;
+	right:0;
+	left: 0;
+	text-align: center;
+	margin-top: 1px;
+	color: #333;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 14px;
+	margin-top: 18px;
+	
+}
 
 
 
