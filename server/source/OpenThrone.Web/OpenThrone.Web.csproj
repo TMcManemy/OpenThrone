@@ -150,6 +150,9 @@
     <Content Include="..\..\..\prototype\images\central-processor.png">
       <Link>Content\images\central-processor.png</Link>
     </Content>
+    <Content Include="..\..\..\prototype\images\favicon.ico">
+      <Link>favicon.ico</Link>
+    </Content>
     <Content Include="..\..\..\prototype\images\header-bg.jpg">
       <Link>Content\images\header-bg.jpg</Link>
     </Content>
