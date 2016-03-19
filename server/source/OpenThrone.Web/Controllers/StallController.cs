@@ -29,8 +29,6 @@ namespace OpenThrone.Web.Controllers
             stall.Available = updateStallStatus.Available;
             StallCache.UpdateStall(stall);
             GlobalHost.ConnectionManager.GetHubContext<NotificationHub>().Clients.All.stallAvailabilityChange(stall);
-            Log.DebugFormat("SignalR message sent to change stall {0} status to {1}", stall.Id,
-                stall.Available ? "available" : "occupied");
         }
     }
 
