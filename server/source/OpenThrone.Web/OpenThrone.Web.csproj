@@ -126,9 +126,6 @@
     <Content Include="..\..\..\prototype\img\openthrone-logo.svg">
       <Link>Content\images\openthrone-logo.svg</Link>
     </Content>
-    <Content Include="..\..\..\prototype\js\main.js">
-      <Link>Content\scripts\main.js</Link>
-    </Content>
     <Content Include="..\..\..\prototype\js\vendor\bootstrap.min.js">
       <Link>Content\scripts\bootstrap.min.js</Link>
     </Content>
@@ -137,9 +134,6 @@
     </Content>
     <Content Include="..\..\..\prototype\js\vendor\jquery.signalR-2.2.0.min.js">
       <Link>Content\scripts\jquery.signalR-2.2.0.min.js</Link>
-    </Content>
-    <Content Include="..\..\..\prototype\js\vendor\modernizr-2.8.3-respond-1.4.2.min.js">
-      <Link>Content\scripts\modernizr-2.8.3-respond-1.4.2.min.js</Link>
     </Content>
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
