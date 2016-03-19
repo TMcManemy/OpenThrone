@@ -147,11 +147,20 @@
     <Content Include="..\..\..\prototype\images\about\4.jpg">
       <Link>Content\images\about\4.jpg</Link>
     </Content>
+    <Content Include="..\..\..\prototype\images\central-processor.png">
+      <Link>Content\images\central-processor.png</Link>
+    </Content>
     <Content Include="..\..\..\prototype\images\header-bg.jpg">
       <Link>Content\images\header-bg.jpg</Link>
     </Content>
+    <Content Include="..\..\..\prototype\images\hi-level.png">
+      <Link>Content\images\hi-level.png</Link>
+    </Content>
     <Content Include="..\..\..\prototype\images\logos\aetuts.jpg">
       <Link>Content\images\logos\aetuts.jpg</Link>
+    </Content>
+    <Content Include="..\..\..\prototype\images\logos\asynch.jpg">
+      <Link>Content\images\logos\asynch.jpg</Link>
     </Content>
     <Content Include="..\..\..\prototype\images\logos\creative-market.jpg">
       <Link>Content\images\logos\creative-market.jpg</Link>
@@ -170,6 +179,9 @@
     </Content>
     <Content Include="..\..\..\prototype\images\logos\wordpress.jpg">
       <Link>Content\images\logos\wordpress.jpg</Link>
+    </Content>
+    <Content Include="..\..\..\prototype\images\logos\wwt.jpg">
+      <Link>Content\images\logos\wwt.jpg</Link>
     </Content>
     <Content Include="..\..\..\prototype\images\map-image.png">
       <Link>Content\images\map-image.png</Link>
@@ -212,6 +224,9 @@
     </Content>
     <Content Include="..\..\..\prototype\images\portfolio\treehouse.png">
       <Link>Content\images\portfolio\treehouse.png</Link>
+    </Content>
+    <Content Include="..\..\..\prototype\images\stall-sensor.png">
+      <Link>Content\images\stall-sensor.png</Link>
     </Content>
     <Content Include="..\..\..\prototype\images\team\andrew_blackwell.jpg">
       <Link>Content\images\team\andrew_blackwell.jpg</Link>
