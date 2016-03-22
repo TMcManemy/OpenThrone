@@ -126,6 +126,9 @@
     <Content Include="..\..\..\prototype\css\main.css">
       <Link>Content\css\main.css</Link>
     </Content>
+    <Content Include="..\..\..\prototype\favicon.ico">
+      <Link>favicon.ico</Link>
+    </Content>
     <Content Include="..\..\..\prototype\fonts\font-awesome\css\font-awesome.css">
       <Link>Content\fonts\font-awesome\css\font-awesome.css</Link>
     </Content>
@@ -149,9 +152,6 @@
     </Content>
     <Content Include="..\..\..\prototype\images\central-processor.png">
       <Link>Content\images\central-processor.png</Link>
-    </Content>
-    <Content Include="..\..\..\prototype\images\favicon.ico">
-      <Link>favicon.ico</Link>
     </Content>
     <Content Include="..\..\..\prototype\images\header-bg.jpg">
       <Link>Content\images\header-bg.jpg</Link>
