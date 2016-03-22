@@ -246,6 +246,9 @@
     <Content Include="..\..\..\prototype\images\team\tim_mcmanemy.jpg">
       <Link>Content\images\team\tim_mcmanemy.jpg</Link>
     </Content>
+    <Content Include="..\..\..\prototype\images\web-stack.png">
+      <Link>Content\images\web-stack.png</Link>
+    </Content>
     <Content Include="..\..\..\prototype\scripts\agency.js">
       <Link>Content\scripts\agency.js</Link>
     </Content>
@@ -273,7 +276,6 @@
     <Content Include="..\..\..\prototype\scripts\jquery.signalR-2.2.0.min.js">
       <Link>Content\scripts\jquery.signalR-2.2.0.min.js</Link>
     </Content>
-    <Content Include="Content\images\web-stack.png" />
     <Content Include="Global.asax" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
