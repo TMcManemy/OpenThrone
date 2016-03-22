@@ -31,16 +31,18 @@
   </Target>   
 
   <Target Name="Package" DependsOnTargets="Clean;Compile">
-    <MSBuild Projects=".\source\OpenThrone.Web\OpenThrone.Web.csproj" Targets="Package" Properties="Configuration=$(BuildConfiguration)" />
-    <CreateItem Include=".\source\OpenThrone.Web\obj\**\OpenThrone.Web.zip;.\source\OpenThrone.Web\obj\**\OpenThrone.Web.deploy.cmd;.\source\OpenThrone.Web\obj\**\OpenThrone.Web.SetParameters.xml">
+    <MSBuild Projects=".\source\OpenThrone.Web.App\OpenThrone.Web.App.csproj;.\source\OpenThrone.Web.Static\OpenThrone.Web.Static.csproj" Targets="Package" Properties="Configuration=$(BuildConfiguration)" />
+    <CreateItem Include=".\source\OpenThrone.Web.App\obj\**\OpenThrone.Web.App.zip;.\source\OpenThrone.Web.App\obj\**\OpenThrone.Web.App.deploy.cmd;.\source\OpenThrone.Web.App\obj\**\OpenThrone.Web.App.SetParameters.xml;.\source\OpenThrone.Web.Static\obj\**\OpenThrone.Web.Static.zip;.\source\OpenThrone.Web.Static\obj\**\OpenThrone.Web.Static.deploy.cmd;.\source\OpenThrone.Web.Static\obj\**\OpenThrone.Web.Static.SetParameters.xml">
       <Output TaskParameter="Include" ItemName="PackageFiles" />
     </CreateItem>  
     <Copy SourceFiles="@(PackageFiles)" DestinationFolder=".\build\Package" />    
   </Target>     
   
   <Target Name="Deploy">
-    <XmlPoke XmlInputPath=".\build\Package\OpenThrone.Web.SetParameters.xml" Query="//parameters/setParameter[@name='IIS Web Application Name']/@value" Value="OpenThrone"/>   
-    <Exec Command=".\build\Package\OpenThrone.Web.deploy.cmd /Y /M:$(TargetWebServerName) /U:$(Username) /P:$(Password) " />
+    <XmlPoke XmlInputPath=".\build\Package\OpenThrone.Web.App.SetParameters.xml" Query="//parameters/setParameter[@name='IIS Web Application Name']/@value" Value="OpenThrone.App"/>
+    <XmlPoke XmlInputPath=".\build\Package\OpenThrone.Web.Static.SetParameters.xml" Query="//parameters/setParameter[@name='IIS Web Application Name']/@value" Value="OpenThrone.Static"/>
+    <Exec Command=".\build\Package\OpenThrone.Web.App.deploy.cmd /Y /M:$(TargetWebServerName) /U:$(Username) /P:$(Password) " />
+    <Exec Command=".\build\Package\OpenThrone.Web.Static.deploy.cmd /Y /M:$(TargetWebServerName) /U:$(Username) /P:$(Password) " />
   </Target>  
   
   <Target Name="Bootstrap">

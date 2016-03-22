@@ -1,7 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenThrone.Web", "source\OpenThrone.Web\OpenThrone.Web.csproj", "{B171785D-741D-4C13-AD8C-14842A6B0819}"
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenThrone.Web.App", "source\OpenThrone.Web.App\OpenThrone.Web.App.csproj", "{B171785D-741D-4C13-AD8C-14842A6B0819}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{1071CA12-02AE-4952-A44B-8F9A511030EC}"
 	ProjectSection(SolutionItems) = preProject
@@ -9,6 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{1071CA
 		.nuget\NuGet.exe = .nuget\NuGet.exe
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenThrone.Web.Static", "source\OpenThrone.Web.Static\OpenThrone.Web.Static.csproj", "{5D8D166C-AAEA-4E39-A097-3C590BFCCFC4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,6 +24,10 @@ Global
 		{B171785D-741D-4C13-AD8C-14842A6B0819}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B171785D-741D-4C13-AD8C-14842A6B0819}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B171785D-741D-4C13-AD8C-14842A6B0819}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D8D166C-AAEA-4E39-A097-3C590BFCCFC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D8D166C-AAEA-4E39-A097-3C590BFCCFC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D8D166C-AAEA-4E39-A097-3C590BFCCFC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D8D166C-AAEA-4E39-A097-3C590BFCCFC4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
