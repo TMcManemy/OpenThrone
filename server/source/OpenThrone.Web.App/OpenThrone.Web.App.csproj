@@ -298,7 +298,6 @@
   <ItemGroup>
     <Content Include="packages.config" />
     <Content Include="Views\web.config" />
-    <Content Include="Views\Home\WWT.cshtml" />
     <Content Include="Views\Home\Asynchrony.cshtml" />
     <Content Include="..\..\..\prototype\fonts\font-awesome\fonts\fontawesome-webfont.eot">
       <Link>Content\fonts\font-awesome\fonts\fontawesome-webfont.eot</Link>
