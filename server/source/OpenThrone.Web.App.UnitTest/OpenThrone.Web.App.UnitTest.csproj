@@ -55,6 +55,7 @@
   <ItemGroup>
     <Compile Include="StallCacheTests.cs" />
     <Compile Include="TokenAuthenticatedTests.cs" />
+    <Compile Include="StallControllerTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
